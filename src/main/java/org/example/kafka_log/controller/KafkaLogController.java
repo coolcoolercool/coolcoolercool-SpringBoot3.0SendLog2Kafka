@@ -1,5 +1,6 @@
-package org.example.kafka_log;
+package org.example.kafka_log.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,9 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping
+@Slf4j
 public class KafkaLogController {
 
-    private Logger log = LoggerFactory.getLogger("KafkaLogController.class");
+    // private Logger log = LoggerFactory.getLogger("KafkaLogController.class");
 
     @GetMapping
     public void testKafkaLog() {

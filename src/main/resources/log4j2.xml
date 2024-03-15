@@ -1,36 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration>
     <Properties>
-        <Property name="projectArtifactId" value = "kafka_log_application" />
+        <Property name="projectArtifactId" value="kafka_log_application"/>
         <Property name="logFormat">
             %d{yyyy-MM-dd HH:mm:ss.SSS}{GMT+8} [${projectArtifactId}] [%thread] %-5level %logger{35} - %msg %n
         </Property>
-        <Property name="kafkaBootstrapServers">
-            localhost:9092
-        </Property>
+        <Property name="kafkaBootstrapServers">localhost:9092</Property>
     </Properties>
     <Appenders>
         <Console name="STDOUT" target="SYSTEM_OUT">
             <PatternLayout pattern="${logFormat}"/>
         </Console>
 
-        <RollingFile name="RollingFile" fileName="logs/@project.artifactId@.log"
-                     filePattern="logs/@project.artifactId@.%d{yyyy-MM-dd}.log">
+        <RollingFile name="RollingFile" fileName="logs/${projectArtifactId}.log"
+                     filePattern="logs/${projectArtifactId}.%d{yyyy-MM-dd}.log">
             <PatternLayout>
-                <Pattern>
-                    ${logFormat}
-                </Pattern>
+                <Pattern>${logFormat}</Pattern>
             </PatternLayout>
             <Policies>
                 <TimeBasedTriggeringPolicy/>
             </Policies>
         </RollingFile>
 
-        <Kafka name="basicLog" topic="kafka">
+        <Kafka name="sendLog2Kafka" topic="kafka">
+            <!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）-->
+            <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
             <PatternLayout>
-                <Pattern>
-                    ${logFormat}
-                </Pattern>
+                <Pattern>${logFormat}</Pattern>
             </PatternLayout>
             <Property name="bootstrap.servers">${kafkaBootstrapServers}</Property>
         </Kafka>
@@ -39,8 +35,8 @@
             <AppenderRef ref="RollingFile"/>
         </Async>
 
-        <Async name="basicLogAsync">
-            <AppenderRef ref="basicLog"/>
+        <Async name="sendLog2KafkaAsync">
+            <AppenderRef ref="sendLog2Kafka"/>
         </Async>
 
     </Appenders>
@@ -49,7 +45,7 @@
         <Root level="info">
             <AppenderRef ref="STDOUT"/>
             <AppenderRef ref="FileAsync"/>
-            <AppenderRef ref="basicLogAsync"/>
+            <AppenderRef ref="sendLog2KafkaAsync"/>
         </Root>
     </Loggers>
 </Configuration>
