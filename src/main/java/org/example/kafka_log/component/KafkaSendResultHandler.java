@@ -7,10 +7,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.kafka.support.ProducerListener;
 import org.springframework.stereotype.Component;
 
-/**
+/*
  * 针对kafka发送消息的成功还是失败的处理
  */
-@Component
+
+@Component(value = "KafkaSendResultHandler")
 public class KafkaSendResultHandler implements ProducerListener {
 
     private static final Logger log = LoggerFactory.getLogger(KafkaSendResultHandler.class);

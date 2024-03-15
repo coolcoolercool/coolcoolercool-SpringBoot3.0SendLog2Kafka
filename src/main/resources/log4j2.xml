@@ -25,6 +25,15 @@
         <Kafka name="sendLog2Kafka" topic="kafka">
             <!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）-->
             <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
+            <!--这行配置，会让日志以 json 的格式输出到 kafka-->
+            <JSONLayout compact="true" eventEol="true" properties="true" stacktraceAsString="true" includeTimeMillis="true">
+                <!--  Project properties-->
+                <KeyValuePair key="appName" value="${project.name}" />
+                <KeyValuePair key="version" value="${project.version}" />
+                <KeyValuePair key="appType" value="${app.type}" />
+                <!--  Datadog log ingestion properties -->
+                <KeyValuePair key="service" value="${project.artifactId}" />
+            </JSONLayout>
             <PatternLayout>
                 <Pattern>${logFormat}</Pattern>
             </PatternLayout>
