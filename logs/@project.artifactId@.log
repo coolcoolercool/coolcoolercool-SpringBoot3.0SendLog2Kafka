@@ -1,0 +1,97 @@
+2024-03-15 08:40:04.021 [@project.artifactId@] [main] INFO  org.example.kafka_log.KafkaLogApplication - Starting KafkaLogApplication using Java 20.0.2 with PID 30524 (D:\code\javacode\practice\kafka_log\target\classes started by 周子望 in D:\code\javacode\practice\kafka_log) 
+2024-03-15 08:40:04.029 [@project.artifactId@] [main] INFO  org.example.kafka_log.KafkaLogApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-03-15 08:40:04.088 [@project.artifactId@] [kafka-producer-network-thread | producer-1] WARN  org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Error while fetching metadata with correlation id 1 : {basic-log=LEADER_NOT_AVAILABLE} 
+2024-03-15 08:40:04.090 [@project.artifactId@] [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: Cn5MKtk0QtmtJcHyQznLBg 
+2024-03-15 08:40:04.096 [@project.artifactId@] [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.producer.internals.TransactionManager - [Producer clientId=producer-1] ProducerId set to 0 with epoch 0 
+2024-03-15 08:40:04.541 [@project.artifactId@] [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-03-15 08:40:04.548 [@project.artifactId@] [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-03-15 08:40:04.550 [@project.artifactId@] [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2024-03-15 08:40:04.550 [@project.artifactId@] [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19] 
+2024-03-15 08:40:04.580 [@project.artifactId@] [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2024-03-15 08:40:04.580 [@project.artifactId@] [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 515 ms 
+2024-03-15 08:40:04.824 [@project.artifactId@] [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-03-15 08:40:04.835 [@project.artifactId@] [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '' 
+2024-03-15 08:40:04.840 [@project.artifactId@] [main] INFO  org.example.kafka_log.KafkaLogApplication - Started KafkaLogApplication in 1.037 seconds (process running for 1.786) 
+2024-03-15 08:40:11.650 [@project.artifactId@] [http-nio-8080-exec-3] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-03-15 08:40:11.650 [@project.artifactId@] [http-nio-8080-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-03-15 08:40:11.651 [@project.artifactId@] [http-nio-8080-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms 
+2024-03-15 08:40:11.668 [@project.artifactId@] [http-nio-8080-exec-3] INFO  KafkaLogController.class - info log ------------------------ 
+2024-03-15 08:40:11.668 [@project.artifactId@] [http-nio-8080-exec-3] WARN  KafkaLogController.class - warn log ------------------------ 
+2024-03-15 08:40:11.668 [@project.artifactId@] [http-nio-8080-exec-3] ERROR KafkaLogController.class - error log ------------------------ 
+2024-03-15 08:40:50.512 [@project.artifactId@] [http-nio-8080-exec-2] INFO  KafkaLogController.class - info log ------------------------ 
+2024-03-15 08:40:50.512 [@project.artifactId@] [http-nio-8080-exec-2] WARN  KafkaLogController.class - warn log ------------------------ 
+2024-03-15 08:40:50.512 [@project.artifactId@] [http-nio-8080-exec-2] ERROR KafkaLogController.class - error log ------------------------ 
+2024-03-15 08:40:51.598 [@project.artifactId@] [http-nio-8080-exec-5] INFO  KafkaLogController.class - info log ------------------------ 
+2024-03-15 08:40:51.598 [@project.artifactId@] [http-nio-8080-exec-5] WARN  KafkaLogController.class - warn log ------------------------ 
+2024-03-15 08:40:51.598 [@project.artifactId@] [http-nio-8080-exec-5] ERROR KafkaLogController.class - error log ------------------------ 
+2024-03-15 08:40:52.452 [@project.artifactId@] [http-nio-8080-exec-4] INFO  KafkaLogController.class - info log ------------------------ 
+2024-03-15 08:40:52.452 [@project.artifactId@] [http-nio-8080-exec-4] WARN  KafkaLogController.class - warn log ------------------------ 
+2024-03-15 08:40:52.452 [@project.artifactId@] [http-nio-8080-exec-4] ERROR KafkaLogController.class - error log ------------------------ 
+2024-03-15 08:40:53.168 [@project.artifactId@] [http-nio-8080-exec-7] INFO  KafkaLogController.class - info log ------------------------ 
+2024-03-15 08:40:53.169 [@project.artifactId@] [http-nio-8080-exec-7] WARN  KafkaLogController.class - warn log ------------------------ 
+2024-03-15 08:40:53.169 [@project.artifactId@] [http-nio-8080-exec-7] ERROR KafkaLogController.class - error log ------------------------ 
+2024-03-15 08:41:26.418 [@project.artifactId@] [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: Cn5MKtk0QtmtJcHyQznLBg 
+2024-03-15 08:41:26.424 [@project.artifactId@] [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.producer.internals.TransactionManager - [Producer clientId=producer-1] ProducerId set to 1 with epoch 0 
+2024-03-15 08:41:26.458 [@project.artifactId@] [main] INFO  org.example.kafka_log.KafkaLogApplication - Starting KafkaLogApplication using Java 20.0.2 with PID 41596 (D:\code\javacode\practice\kafka_log\target\classes started by 周子望 in D:\code\javacode\practice\kafka_log) 
+2024-03-15 08:41:26.459 [@project.artifactId@] [main] INFO  org.example.kafka_log.KafkaLogApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-03-15 08:41:26.964 [@project.artifactId@] [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-03-15 08:41:26.973 [@project.artifactId@] [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-03-15 08:41:26.975 [@project.artifactId@] [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2024-03-15 08:41:26.975 [@project.artifactId@] [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19] 
+2024-03-15 08:41:27.007 [@project.artifactId@] [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2024-03-15 08:41:27.007 [@project.artifactId@] [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 521 ms 
+2024-03-15 08:41:27.208 [@project.artifactId@] [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-03-15 08:41:27.216 [@project.artifactId@] [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '' 
+2024-03-15 08:41:27.222 [@project.artifactId@] [main] INFO  org.example.kafka_log.KafkaLogApplication - Started KafkaLogApplication in 0.978 seconds (process running for 1.591) 
+2024-03-15 08:41:34.111 [@project.artifactId@] [http-nio-8080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-03-15 08:41:34.111 [@project.artifactId@] [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-03-15 08:41:34.112 [@project.artifactId@] [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms 
+2024-03-15 08:41:34.127 [@project.artifactId@] [http-nio-8080-exec-2] INFO  KafkaLogController.class - info log ------------------------ 
+2024-03-15 08:41:34.128 [@project.artifactId@] [http-nio-8080-exec-2] WARN  KafkaLogController.class - warn log ------------------------ 
+2024-03-15 08:41:34.128 [@project.artifactId@] [http-nio-8080-exec-2] ERROR KafkaLogController.class - error log ------------------------ 
+2024-03-15 08:41:40.959 [@project.artifactId@] [http-nio-8080-exec-3] INFO  KafkaLogController.class - info log ------------------------ 
+2024-03-15 08:41:40.959 [@project.artifactId@] [http-nio-8080-exec-3] WARN  KafkaLogController.class - warn log ------------------------ 
+2024-03-15 08:41:40.959 [@project.artifactId@] [http-nio-8080-exec-3] ERROR KafkaLogController.class - error log ------------------------ 
+2024-03-15 08:41:42.523 [@project.artifactId@] [http-nio-8080-exec-4] INFO  KafkaLogController.class - info log ------------------------ 
+2024-03-15 08:41:42.523 [@project.artifactId@] [http-nio-8080-exec-4] WARN  KafkaLogController.class - warn log ------------------------ 
+2024-03-15 08:41:42.523 [@project.artifactId@] [http-nio-8080-exec-4] ERROR KafkaLogController.class - error log ------------------------ 
+2024-03-15 08:41:44.814 [@project.artifactId@] [http-nio-8080-exec-6] INFO  KafkaLogController.class - info log ------------------------ 
+2024-03-15 08:41:44.814 [@project.artifactId@] [http-nio-8080-exec-6] WARN  KafkaLogController.class - warn log ------------------------ 
+2024-03-15 08:41:44.814 [@project.artifactId@] [http-nio-8080-exec-6] ERROR KafkaLogController.class - error log ------------------------ 
+2024-03-15 08:41:46.244 [@project.artifactId@] [http-nio-8080-exec-5] INFO  KafkaLogController.class - info log ------------------------ 
+2024-03-15 08:41:46.244 [@project.artifactId@] [http-nio-8080-exec-5] WARN  KafkaLogController.class - warn log ------------------------ 
+2024-03-15 08:41:46.244 [@project.artifactId@] [http-nio-8080-exec-5] ERROR KafkaLogController.class - error log ------------------------ 
+2024-03-15 08:44:46.732 [kafka_log_application}] [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: Cn5MKtk0QtmtJcHyQznLBg 
+2024-03-15 08:44:46.736 [kafka_log_application}] [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.producer.internals.TransactionManager - [Producer clientId=producer-1] ProducerId set to 2 with epoch 0 
+2024-03-15 08:44:46.778 [kafka_log_application}] [main] INFO  org.example.kafka_log.KafkaLogApplication - Starting KafkaLogApplication using Java 20.0.2 with PID 14340 (D:\code\javacode\practice\kafka_log\target\classes started by 周子望 in D:\code\javacode\practice\kafka_log) 
+2024-03-15 08:44:46.780 [kafka_log_application}] [main] INFO  org.example.kafka_log.KafkaLogApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-03-15 08:44:47.331 [kafka_log_application}] [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-03-15 08:44:47.342 [kafka_log_application}] [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-03-15 08:44:47.344 [kafka_log_application}] [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2024-03-15 08:44:47.344 [kafka_log_application}] [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19] 
+2024-03-15 08:44:47.377 [kafka_log_application}] [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2024-03-15 08:44:47.377 [kafka_log_application}] [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 568 ms 
+2024-03-15 08:44:47.600 [kafka_log_application}] [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-03-15 08:44:47.609 [kafka_log_application}] [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '' 
+2024-03-15 08:44:47.615 [kafka_log_application}] [main] INFO  org.example.kafka_log.KafkaLogApplication - Started KafkaLogApplication in 1.064 seconds (process running for 1.697) 
+2024-03-15 08:44:54.016 [kafka_log_application}] [http-nio-8080-exec-6] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-03-15 08:44:54.016 [kafka_log_application}] [http-nio-8080-exec-6] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-03-15 08:44:54.017 [kafka_log_application}] [http-nio-8080-exec-6] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms 
+2024-03-15 08:44:54.035 [kafka_log_application}] [http-nio-8080-exec-6] INFO  KafkaLogController.class - info log ------------------------ 
+2024-03-15 08:44:54.035 [kafka_log_application}] [http-nio-8080-exec-6] WARN  KafkaLogController.class - warn log ------------------------ 
+2024-03-15 08:44:54.035 [kafka_log_application}] [http-nio-8080-exec-6] ERROR KafkaLogController.class - error log ------------------------ 
+2024-03-15 08:53:46.812 [kafka_log_application}] [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node -1 disconnected. 
+2024-03-15 10:48:24.630 [kafka_log_application] [main] INFO  org.example.kafka_log.KafkaLogApplication - Starting KafkaLogApplication using Java 20.0.2 with PID 23208 (D:\code\javacode\practice\kafka_log\target\classes started by 周子望 in D:\code\javacode\practice\kafka_log) 
+2024-03-15 10:48:24.637 [kafka_log_application] [main] INFO  org.example.kafka_log.KafkaLogApplication - No active profile set, falling back to 1 default profile: "default" 
+2024-03-15 10:48:25.202 [kafka_log_application] [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http) 
+2024-03-15 10:48:25.214 [kafka_log_application] [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"] 
+2024-03-15 10:48:25.215 [kafka_log_application] [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat] 
+2024-03-15 10:48:25.215 [kafka_log_application] [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.19] 
+2024-03-15 10:48:25.251 [kafka_log_application] [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext 
+2024-03-15 10:48:25.252 [kafka_log_application] [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 572 ms 
+2024-03-15 10:48:25.492 [kafka_log_application] [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"] 
+2024-03-15 10:48:25.503 [kafka_log_application] [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '' 
+2024-03-15 10:48:25.511 [kafka_log_application] [main] INFO  org.example.kafka_log.KafkaLogApplication - Started KafkaLogApplication in 1.14 seconds (process running for 1.855) 
+2024-03-15 10:48:45.560 [kafka_log_application] [http-nio-8080-exec-2] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2024-03-15 10:48:45.560 [kafka_log_application] [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+2024-03-15 10:48:45.561 [kafka_log_application] [http-nio-8080-exec-2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms 

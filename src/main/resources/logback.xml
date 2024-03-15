@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- 日志存放路径 -->
+    <property name="log.path" value="/mnt/logs" />
+    <!-- 日志输出格式 -->
+    <property name="log.pattern" value="%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - [%method,%line] - %msg%n" />
+    <!-- kafka 配置 -->
+    <springProperty scope="context" name="kafka.servers" source="spring.kafka.appender.bootstrap.servers"/>-->
+    <springProperty scope="context" name="kafka.topic" source="spring.kafka.appender.topic"/>
+    <!-- 控制台输出 -->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%black %red(%d{yyyy-MM-dd HH:mm:ss}) %green([%thread]) %highlight(%-5level) %boldMagenta(%logger) - %cyan(%msg%n)</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 日志文件输出 -->
+    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.path}/logger.log</file>
+        <!-- 循环政策：基于时间创建日志文件 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 日志文件名格式 -->
+            <fileNamePattern>${log.path}/logger.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- 日志最大的历史 30天 -->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%black %red(%d{yyyy-MM-dd HH:mm:ss}) %green([%thread]) %highlight(%-5level) %boldMagenta(%logger) - %cyan(%msg%n)</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 日志信息发送kafka -->
+    <appender name="kafkaAppender" class="com.github.danielwegener.logback.kafka.KafkaAppender">
+        <encoder>
+            <pattern>
+                {
+                "service":"${kafka.servers}",
+                "date":"%d{yyyy-MM-dd HH:mm:ss}",
+                "level":"%level",
+                "thread": "%thread",
+                "logger": "%logger{36}",
+                "msg":"%msg"
+                }
+            </pattern>
+        </encoder>
+        <!-- kafka topic -->
+        <topic>${kafka.topic}</topic>
+        <!--<topic>test</topic>-->
+        <keyingStrategy class="com.github.danielwegener.logback.kafka.keying.NoKeyKeyingStrategy" />
+        <deliveryStrategy class="com.github.danielwegener.logback.kafka.delivery.AsynchronousDeliveryStrategy" />
+        <!-- kafka 地址 -->
+        <producerConfig>bootstrap.servers=${kafka.servers}</producerConfig>
+    </appender>
+
+    <!-- 异步传递策略，建议选择异步，不然连接kafka失败，会阻挡服务启动 -->
+    <appender name="Async" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="kafkaAppender" />
+    </appender>
+
+    <!--日志-->
+    <root level="info">
+        <appender-ref ref="console" />
+        <appender-ref ref="file" />
+        <appender-ref ref="Async" />
+    </root>
+
+</configuration>
